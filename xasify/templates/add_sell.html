@@ -10,7 +10,6 @@
     <form action="add_sell" method="post" id="add_sell_form">
         {% csrf_token %}
         <div class="add_sell_content">
-            <label for="product" id="product">Product:</label>
             <select name="product" id="products">
                 {% for product in products %}
                     <option value="{{ product.id }}">{{ product.name }}</option>
