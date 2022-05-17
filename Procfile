@@ -1,1 +1,1 @@
-web: gunicorn xasify.wsgi --log-file -
+web: gunicorn bussinesManager.wsgi --log-file -
