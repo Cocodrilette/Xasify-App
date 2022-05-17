@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Xasify - Sales{% endblock %}
+    
+{% block content %}
+<h1>
+    Welcome to Xasify!
+</h1>
+{% if products %}
+<table>
+    <tr>
+        <th>Product</th>
+        <th>Price</th>
+    </tr>
+    {% for product in products %}
+    <tr>
+        <td>{{ product.name }}</td>
+        <td>${{ product.price }}</td>
+        <td></td>
+    </tr>
+    {% endfor %}
+    
+</table>
+{% else %}
+<p>
+    No products added.
+</p>
+{% endif %}
+{% endblock %}
