@@ -1,0 +1,331 @@
+@import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
+
+:root {
+    --background_primary: rgb(229, 229, 229);
+    --background_secondary: rgb(252, 163, 17);
+    --secundary_color: rgb(20, 33, 61);
+    --font_black: rgb(0, 0, 0);
+    --shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    --transparent-black: transparent rgba(0, 0, 0, 0.5);
+    --white: rgba(255, 255, 255, 1);
+}
+
+/* GENERAL LAYOUT AND SIZING */
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter';
+}
+
+/* INDEX */
+
+body {
+    background-color: var(--background_primary);
+    display: flex;
+    flex-direction: column;    
+}
+
+header {
+    margin: 0px;
+    padding: 10px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+p[id="view_subtitle"] a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+ul[id="user-info"] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+}
+
+button[id="view-button"] {
+    width: 100%;
+    margin: 10px;
+    padding: 60px 0px;
+    border: none;
+    cursor: pointer;
+}
+
+button[id="view-button"] a {
+    color: var(--font_black);
+    text-decoration: none;
+}
+
+/* ADD SELL */
+
+h1[id="view_title"] {
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+div[class="add_sell_content"] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+div[id="add_sell_content"] label[id="product"] {
+    height: 50px;
+}
+
+div[id="add_sell_content"] select[id="products"] {
+    height: 50px;
+}
+
+form[id="add_sell_form"] {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+form[id="add_sell_form"] button[id="add_sell_button"] {
+    padding: 10px;
+    border: none;
+    margin: 10px;
+    height: 50px;
+    width: 50px;
+}
+
+/* SALES REGISTER */
+
+table[id="sales_register"] {
+    margin-top: 20px;
+    width: 100%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+table[id="sales_register"] tbody tr th {
+    font-size: 1.2rem;
+}
+
+table[id="sales_register"] td{
+    padding: 10px;
+    border-bottom: 2px solid var(--background_secondary);
+}
+
+/* STYLING */
+
+/* INDEX */
+
+header {
+    box-shadow: var(--shadow);
+}
+
+a[id="header_text"] {
+    color: var(--font_black);
+    text-decoration: none;
+}
+
+ul[id="user-info"] {
+    background: var(--white);
+    border: 3px solid var(--background_secondary);
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: var(--shadow);
+}
+
+ul[id="user-info"] li {
+    list-style: none;
+}
+
+ul[id="user-info"] li a {
+    text-decoration: none;
+}
+
+ul[id="user-info"] li a span {
+    color: var(--font_black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button[id="view-button"] {
+    background: var(--secundary_color);
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+    border: 3px solid var(--secundary_color);
+}
+
+button[id="view-button"]:hover {
+    border: 3px solid var(--background_secondary);
+}
+
+button[id="view-button"] a {
+    color: var(--white);
+    font-size: 1.8rem;
+}
+
+/* ADD SALES */
+
+div[class="add_sell_content"] {
+    width: 100%;
+    height: 50px;
+    background: var(--secundary_color);
+    margin-left: 10px;
+    justify-content: space-around;
+    color: var(--white);
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+button[id="add_sell_button"] {
+    background: var(--background_secondary);
+    transition: all 0.3s ease;
+    border-radius: 5px;
+    border: 3px solid var(--font_black);
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+button[id="add_sell_button"]:hover {
+    background: var(--secundary_color);
+    color: var(--white);
+}
+
+select[id="products"] {
+    width: 70%;
+    height: 35px;
+    background: var(--white);
+    justify-content: space-around;
+    color: var(--font_black);
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+}
+
+select[id="products"] option {
+    font-family: 'Inter';
+}
+
+p[id="view_subtitle"] a {
+    margin-top: 5px;
+    color: #ff9f1c;
+    text-decoration: none;
+    font-weight: normal;
+    transition: all 0.3s ease;
+}
+
+p[id="view_subtitle"] a:hover {
+    font-weight: bold;
+}
+
+p[id="no_response"] {
+    width: 100%;
+    text-align: center;
+    margin-top: 60px;
+}
+
+/* SESSION STYLING */
+
+p[id=loginAlert] {
+    text-align: center;
+    color: var(--font_red);
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+div[id="formContainer"] {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form[id="loginForm"] {
+    background: var(--secundary_color);
+    box-shadow: var(--shadow);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 200px;
+    margin: 20px 10px;
+    gap: 10px;
+    border-radius: 5px;
+    padding: 30px 0px;
+}
+
+div[id="usernameForm"] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    
+}
+
+input[id="id_username"] {
+    width: 80%;
+    height: 30px;
+    background: var(--white);
+    color: var(--font_black);
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+input[id="id_password"] {
+    width: 80%;
+    height: 30px;
+    background: var(--white);
+    color: var(--font_black);
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+div[id="passwordForm"] {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+div[id="loginButtons"] {
+    margin-top: 15px;
+}
+
+div[id="loginButtons"] input{
+    cursor: pointer;
+    width: 100px;
+    height: 35px;
+    background: var(--background_secondary);
+    border: 2px solid var(--white);
+    border-radius: 5px;
+}
+
