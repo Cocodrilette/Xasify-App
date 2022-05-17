@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-1hw=0(vi1*ee(pn=%%p$&ew+ow_*2bbjti%@z&f5um2hh(f2uc
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [xasify-web.herokuapp.com]
 
 
 # Application definition
