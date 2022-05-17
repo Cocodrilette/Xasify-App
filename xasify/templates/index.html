@@ -1,18 +1,21 @@
 {% extends "base.html" %}
 
+{% load static %}
+    <link rel="stylesheet" href="{% static 'styles/style.css' %}" type="text/css">
+
 {% block title %}Xasify - Home{% endblock %}
 
 
 {% block content %}
 <nav>
-    <button>
-        <a href="{% url 'add_sell' %}">Sell</a>
+    <button class="view-button" type="button" id="view-button">
+        <a href="{% url 'add_sell' %}">Sell💲</a>
     </button>
-    <button>
-        <a href="{% url 'sales' %}">Sales</a>
+    <button class="view-button" type="button" id="view-button">
+        <a href="{% url 'sales' %}">Sales🧾</a>
     </button>
-    <button>
-        <a href="{% url 'inventory' %}">Inventory</a>
+    <button class="view-button" type="button" id="view-button">
+        <a href="{% url 'inventory' %}">Inventory📇</a>
     </button>
 </nav>
 {% endblock %}

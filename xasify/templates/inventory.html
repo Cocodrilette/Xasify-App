@@ -2,11 +2,14 @@
 {% block title %}Xasify - Sales{% endblock %}
     
 {% block content %}
-<h1>
-    Welcome to Xasify!
+<h1 id="view_title">
+    Price table
 </h1>
+<p id="view_subtitle">
+    <a href="{% url 'add_sell' %}">Add new sale</a>
+</p>
 {% if products %}
-<table>
+<table id="sales_register">
     <tr>
         <th>Product</th>
         <th>Price</th>
@@ -15,13 +18,12 @@
     <tr>
         <td>{{ product.name }}</td>
         <td>${{ product.price }}</td>
-        <td></td>
     </tr>
     {% endfor %}
     
 </table>
 {% else %}
-<p>
+<p id="no_response">
     No products added.
 </p>
 {% endif %}

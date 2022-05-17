@@ -3,23 +3,26 @@
 {% block title %}Xasify - Selling{% endblock %}
 
 {% block content %}
-    <h1>
+    <h1 class="view_title" id="view_title">
         Add new sale
     </h1>
-    <form action="add_sell" method="post">
+    
+    <form action="add_sell" method="post" id="add_sell_form">
         {% csrf_token %}
-        <label for="product">Product</label>
-        <select name="product">
-            {% for product in products %}
-                <option value="{{ product.id }}">{{ product.name }}</option>
-            {% endfor %}
-        </select>
-        <button type="submit" value="add_sell">Add</button>
-        {% if messages %}
+        <div class="add_sell_content">
+            <label for="product" id="product">Product:</label>
+            <select name="product" id="products">
+                {% for product in products %}
+                    <option value="{{ product.id }}">{{ product.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <button type="submit" value="add_sell" id="add_sell_button">+</button>
+        <!-- {% if messages %}
         {% for message in messages %}
-            <p {% if message.tags %} class=" {{ message.tags }} " {% endif %}>{{ message }}</p>
+            <p {% if message.tags %} class=" {{ message.tags }} " {% endif %} id="succes_message">{{ message }}</p>
         {% endfor %}
-    {% endif %}
-    </form>
+        {% endif %} -->
+        </form>
     
 {% endblock %}

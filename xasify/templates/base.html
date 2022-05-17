@@ -4,24 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../static/styles/style.css" type="text/css">
     <title>{% block title %}{% endblock %}</title>
+
     {% load static %}
     <link rel="stylesheet" href="{% static 'styles/style.css' %}" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
 </head>
+
 <body>
+
     <header>
-        <h1><a href="{% url 'index' %}">Xasify</a></h1>
+        <h1 id="header_text"><a id="header_text" href="{% url 'index' %}">La Chazita</a></h1>
     </header>
 
-    <ul class="sidebar-nav">
+    <ul class="user-info" id="user-info">
        {% if user.is_authenticated %}
-         <li>User: {{ user.get_username }}</li>
-         <li><a href="{% url 'logout'%}?next={{request.path}}">Logout</a></li>
+         <li>{{ user.get_username }}</li>
+         <li>
+           <a href="{% url 'logout'%}?next={{request.path}}"><span class="material-symbols-outlined">
+          logout
+          </span></a>
+        </li>
        {% else %}
-         <li><a href="{% url 'login'%}?next={{request.path}}">Login</a></li>
+          <li>Not Logged in</li>
+         <li>
+           <a href="{% url 'login'%}?next={{request.path}}"><span class="material-symbols-outlined">
+          login
+          </span></a>
+        </li>
        {% endif %} 
       </ul>
       
     {% block content %}{% endblock %}
+
 </body>
+
 </html>
