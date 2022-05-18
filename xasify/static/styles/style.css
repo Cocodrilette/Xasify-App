@@ -171,6 +171,7 @@ button[id="view-button"] {
     transition: all 0.3s ease-in-out;
     border-radius: 5px;
     border: 3px solid var(--secundary_color);
+    box-shadow: var(--shadow);
 }
 
 button[id="view-button"]:hover {
