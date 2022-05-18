@@ -1,7 +1,7 @@
 @import url(https://fonts.googleapis.com/css?family=Inter:100,200,300,regular,500,600,700,800,900);
 
 :root {
-    --background_primary: rgb(229, 229, 229);
+    --background_primary: rgb(255, 255, 255);
     --background_secondary: rgb(252, 163, 17);
     --secundary_color: rgb(20, 33, 61);
     --font_black: rgb(0, 0, 0);
